@@ -1,10 +1,10 @@
 package Javatutorial;
 
 //import.java.util.Scanner;
-import java.io.*; 
+
 import java.util.*;
-import java.text.*; 
-import java.math.*; 
+ 
+//import java.math.*; 
 //import java.util.regex.*;
 
 

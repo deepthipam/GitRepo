@@ -1,8 +1,7 @@
 package Javatutorial;
 import java.util.*;
-import java.math.*;
-import java.io.*;
-
+//import java.math.*;
+//import java.io.*;
 
 
 public class Demoloop1 {
