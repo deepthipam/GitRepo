@@ -24,9 +24,7 @@ public class Strtoken {
 	            System.out.println(str);
 	          }    
 	        }
-	        
-	        
-	        
+	         
 	    }
 	}
 
