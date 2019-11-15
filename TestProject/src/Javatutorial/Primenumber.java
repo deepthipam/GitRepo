@@ -6,15 +6,9 @@ import java.text.*;
 import java.util.*;
 import java.util.concurrent.*;
 import java.util.regex.*;
+
 public class Primenumber {
 	
-	
-	
-	
-
-
-
-
 	    private static final Scanner scanner = new Scanner(System.in);
 
 	    public static void main(String[] args) {
@@ -24,9 +18,7 @@ public class Primenumber {
 	      in.close();
 	      System.out.println(n.isProbablePrime(1) ? "prime" :"not prime");
 	    }
-	
-	      //  scanner.close();
-	    
+		    
 	}
 
 
