@@ -5,12 +5,8 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-
-	
-
-	public class Hashset 
+public class Hashset 
 	{
-
 	    public static void main(String[] args) {
 
 	        HashSet  hs = new HashSet ();
