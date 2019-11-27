@@ -4,7 +4,6 @@ import java.util.LinkedList;
 public class Javalist {
 	
 	    public static void main(String[] args) {
-	        /* Create and fill Linked List of Integers */
 	        Scanner scan = new Scanner(System.in);
 	        int N = scan.nextInt();
 	        LinkedList<Integer> list = new LinkedList<>();
@@ -13,7 +12,7 @@ public class Javalist {
 	            list.add(value);
 	        }
 	        
-	        /* Perfrom queries on Linked List */
+	     
 	        int Q = scan.nextInt();
 	        for (int i = 0; i < Q; i++) {
 	            String action = scan.next();
@@ -28,7 +27,7 @@ public class Javalist {
 	        }
 	        scan.close();
 	        
-	        /* Print our updated Linked List */
+	        
 	        for (Integer num : list) {
 	            System.out.print(num + " ");
 	        }
