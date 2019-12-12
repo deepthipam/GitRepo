@@ -1,52 +1,31 @@
 package Javatutorial;
 
-	
-		   	
-			   import java.io.*;
-			   import java.util.*;
-			   import java.text.*;
-			   import java.math.*;
-			   import java.util.regex.*;
+	 
+				  
 
-			   public class JavaContentExtractor {
-			   public static void main(String[] args){
+		 import java.util.Scanner;
+		 import java.util.regex.Matcher;
+		 import java.util.regex.Pattern;
 
-			   Scanner in = new Scanner(System.in);
-			   int testCases = Integer.parseInt(in.nextLine());
-			   while(testCases>0){ String line = in.nextLine(); int current = 0; boolean notValid = true;
-			   for(int x = 0; x < line.length(); x++){
+		 public class JavaContentExtractor {
+		     public static void main(String[] args){
+		         Scanner scan = new Scanner(System.in);
+		         int testCases = Integer.parseInt(scan.nextLine());
+		         
+		         while (testCases-- > 0) {
+		             String line = scan.nextLine();
+		             
+		             boolean matchFound = false;
+		             Pattern r = Pattern.compile("<(.+)>([^<]+)</\\1>");
+		             Matcher m = r.matcher(line);
 
-			   int start = line.indexOf("<", current);
-			   if(start < 0) break;
-
-			   int end = line.indexOf(">", start);
-			   if(end < 0) break;
-
-			   String tag = line.substring(start+1, end);
-
-			   if(tag.length() == 0 || tag.charAt(0) == '/'){
-			   current = end + 1;
-			   continue;
-			   }
-
-			   int opposite = line.indexOf("");
-
-			   if(opposite >= 1){
-			   String candidate = line.substring(end+1, opposite);
-
-			   if(candidate.length() > 0 && candidate.indexOf("<") < 0){
-			   System.out.println(candidate);
-			   notValid = false;
-
-			   }
-			   }
-			   current = end + 1;
-
-			   }
-
-			   if(notValid) System.out.println("None");
-			   testCases--;
-			   }
-
-			   }
-			   }
+		             while (m.find()) {
+		                 System.out.println(m.group(2));
+		                 matchFound = true;
+		             }
+		             if ( ! matchFound) {
+		                 System.out.println("None");
+		             }
+		         }
+		     }
+		 }
